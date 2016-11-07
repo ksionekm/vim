@@ -6,8 +6,12 @@ so ~/.vim/plugins.vim
 
 syntax enable
 
+set showmode
+set nowrap                      "nie zawijaj wierszy
+set mouse=a                     "włącz myszkę w vimie
 set backspace=indent,eol,start	"backspace- standardowe dzialanie
-let mapleader=','       	    "Domyślnie znakiem leader jest \, tutaj zmieniam na ,
+set autoindent                  "zawsze włącz automatyczny autoindent
+set copyindent                  "skopiuj poprzednie wcięcia przy autowcięciach
 set number              	    "Aktywacja numerów linii
 set complete=.,w,b,u 		    "Ustawienie podpowiedzi do autouzupełniania
 set tabstop=4
@@ -15,12 +19,21 @@ set expandtab
 set softtabstop=4
 set shiftwidth=4
 
+let mapleader=','       	    "Domyślnie znakiem leader jest \, tutaj zmieniam na ,
 
 "----Viuals----"
 set t_Co=256
 colorscheme atom-dark-256
 hi LineNr ctermbg=bg 
 
+
+"Powerline
+Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+set laststatus=2
+set term=xterm-256color
+set termencoding=utf-8
+set guifont=Ubuntu\ Mono\ derivative\ Powerline:10
+let g:Powerline_symbols = 'fancy'
 
 
 
@@ -29,10 +42,13 @@ set hlsearch
 set incsearch
 
 
-
-
-
 "----Mappings----"
+
+"Szybkie zapisywanie pliku
+nmap <leader>w :w!<cr>
+
+"szybkie wychodzenie do trybu normalnego
+imap jj <esc>
 
 "Szybkie otwieranie pliku konfiguracyjnego"
 nmap <leader>ev :tabedit $MYVIMRC<cr>
@@ -58,7 +74,9 @@ nmap <leader>1 :NERDTreeToggle<cr>
 nmap <C-R> :CtrlPBufTag<cr>
 nmap <leader>e :CtrlPMRUFiles<cr>
 
-
+"splits
+nmap vs :vsplit<cr>
+nmap sp :split<cr>
 
 
 "----Plugins----"
@@ -126,6 +144,7 @@ vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr
 "
 "- 'gg'- przejście na początek pliku
 "- 'zz'- zmiana widoku, aby kursor był na środku ekranu
+"- 'G'- przejście na koniec pliku
 "
 "- w konsoli- ctags -R; - tworzy plik z tagami. Następnie, aby udać się do
 "metody z innego pliku, na której jest kursor- ctr + ]. Aby wrócić do

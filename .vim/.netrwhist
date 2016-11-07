@@ -1,11 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/ksionekm/Devel/scotch.io/ScienceWizard/public/src/InstitutionAssessment/Achievements'
-let g:netrw_dirhist_2='/home/ksionekm/Devel/scotch.io/ScienceWizard/public/src/InstitutionAssessment/Achievements/Controller'
-let g:netrw_dirhist_3='/home/ksionekm/Devel/SCN'
-let g:netrw_dirhist_4='/home/ksionekm/Devel/SCN/app'
-let g:netrw_dirhist_5='/home/ksionekm/Devel/SCN/app/Jobs'
-let g:netrw_dirhist_6='/home/ksionekm/Devel/SCN'
-let g:netrw_dirhist_7='/home/ksionekm/dotfiles/vim/.vim'
-let g:netrw_dirhist_8='/home/ksionekm'
-let g:netrw_dirhist_9='/home/ksionekm/dotfiles/vim/.vim'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/ksionekm'
+let g:netrw_dirhist_2='/home/ksionekm/dotfiles'
+let g:netrw_dirhist_3='/home/ksionekm/dotfiles/vim'
+let g:netrw_dirhist_4='/home/ksionekm/Devel/SwinioTrener2'
